@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Image to Info</title>
+    
+    <!-- include A-Frame obviously -->
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+    
+    <!-- include ar.js for A-Frame -->
+    <!-- rawgithack development URL -->
+    <script src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js'></script>
+
+    <!-- =================================================================================== -->
+    <!-- 我把用來掛Event的Component移動到別的檔案去了。在AframeComponents/MarkerHandler.js -->
+    <!-- 這只是掛Event用的 -->
+    <!-- =================================================================================== -->
+    <!-- Get self-wrtten component -->
+    <script src="MarkerHandler.js"></script>
+
+</head>
+    
+<style>
+    .arjs-loader {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .arjs-loader div {
+      text-align: center;
+      font-size: 1.25em;
+      color: white;
+    }
+
+    #Displayer {
+      top: 0px;
+      text-align: center;
+      font-size: 1.25em;
+      color: white;
+    }
+  </style>
+  
+  <body style='margin : 0px; overflow: hidden;'>
+     <!-- minimal loader shown until image descriptors are loaded -->
+
+     <!--這個DIV會顯示在螢幕上，顯示偵測的狀態  -->
+     <div id="Displayer">Not detected</div>
+    
+     <div class="arjs-loader">
+      <div>Loading, please wait...</div>
+    </div>
+
+      <a-scene
+          vr-mode-ui="enabled: false;"
+          info_marker_handler="index: 1"
+          renderer="logarithmicDepthBuffer: true;"
+          embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
+
+          <!-- <a-nft
+              type='nft' url='datasets/Dino'
+              smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'
+            >
+                <a-box scale="100 10 100" position="0 0 -50" material='color: red;'></a-box>
+          </a-nft> -->
+
+          <!-- B1 -->
+          <a-nft
+              type='nft' url='datasets/B1'
+              smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'
+            >
+                <a-box scale="100 10 100" position="100 -30 -300" material='color: red;'></a-box>
+          </a-nft>
+
+          <!-- B2 -->
+          <a-nft
+              type='nft' url='datasets/B2'
+              smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'
+            >
+                <a-box scale="100 10 100" position="100 -30 -300" material='color: green;'></a-box>
+          </a-nft>
+
+          <!-- B3 -->
+          <!-- <a-nft
+              type='nft' url='datasets/B3'
+              smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'
+            >
+                <a-box scale="100 10 100" position="0 150 -100" material='color: blue;'></a-box>
+          </a-nft> -->
+          
+          <!-- B4 -->
+          <!-- <a-nft
+              type='nft' url='datasets/B4'
+              smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'
+            >
+                <a-box scale="100 10 100" position="50 150 0" material='color: red;'></a-box>
+          </a-nft> -->
+
+          <!-- B5 -->
+          <!-- <a-nft
+              type='nft' url='datasets/B5'
+              smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'
+            >
+                <a-box scale="100 10 100" position="50 150 0" material='color: red;'></a-box>
+          </a-nft> -->
+        
+          <!-- B6 -->
+          <!-- <a-nft
+              type='nft' url='datasets/B6'
+              smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'
+            >
+                <a-box scale="100 10 100" position="50 150 0" material='color: red;'></a-box>
+          </a-nft> -->
+
+          <!-- B7 -->
+          <!-- <a-nft
+              type='nft' url='datasets/B7'
+              smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'
+            >
+                <a-box scale="100 10 100" position="50 150 0" material='color: red;'></a-box>
+          </a-nft> -->
+
+          <!-- B8 -->
+          <!-- <a-nft
+              type='nft' url='datasets/B8'
+              smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'
+            >
+                <a-box scale="100 10 100" position="50 150 0" material='color: red;'></a-box>
+          </a-nft> -->
+
+          <!-- B9 -->
+          <!-- <a-nft
+              type='nft' url='datasets/B9'
+              smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'
+            >
+                <a-box scale="100 10 100" position="50 150 0" material='color: red;'></a-box>
+          </a-nft> -->
+
+          <!-- B10 -->
+          <!-- <a-nft
+              type='nft' url='datasets/B10'
+              smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'
+            >
+                <a-box scale="100 10 100" position="50 150 0" material='color: red;'></a-box>
+          </a-nft> -->
+          <a-entity camera></a-entity>
+      </a-scene>
+  </body>
